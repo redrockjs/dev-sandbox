@@ -1,0 +1,12 @@
+.mainform {
+    text-align: center;
+}
+.btn {
+    height: 100px;
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+#slider-window {
+    width: 200px;
+}

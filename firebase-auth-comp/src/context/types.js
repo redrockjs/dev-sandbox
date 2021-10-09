@@ -1,0 +1,2 @@
+export const SET_IS_AUTH = 'SET_IS_AUTH'
+export const SET_AUTH_USER_DATA = 'SET_AUTH_USER_DATA'

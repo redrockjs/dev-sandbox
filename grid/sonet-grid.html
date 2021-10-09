@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Grid</title>
+	<style>
+		* {padding: 10px; margin: 10px}
+
+		.wrapper {
+			display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 2fr 10fr;
+			grid-auto-rows: minmax(100px, auto);
+			grid-gap: 10px;
+			justify-items: stretch;
+			align-items: stretch;
+		}
+ 
+		.header-l {
+			/*align-self: start;
+			justify-self: end;*/
+			grid-column: 1/2;
+			grid-row: 1/2;
+		}
+
+		.header-r {
+			/*align-self: end;*/
+			grid-column: 2;
+			grid-row: 1/2;
+		}
+
+		.nav {
+			/*justify-self: center;*/
+			grid-column: 1/2;
+			grid-row: 2;
+		}
+
+		.main {
+			grid-column: 2;
+			grid-row: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header-l">Header-L</div>
+		<div class="header-r">Header-R</div>
+		<div class="nav">  Nav</div>
+		<div class="main"> Main</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Использование классов</title>
+    <style>
+        a {
+            color: orange; /* Цвет ссылки */
+        }
+        a.bottomLink {
+            color: #ffffff; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+        a.bottomLink:visited {
+            color: #ffffff; /* Цвет посещенных ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+        a.bottomLink:hover {
+            color: #ffffff; /* Цвет ссылок при наведении на них курсора мыши */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+    </style>
+</head>
+<body>
+<p>
+    <a href="link1.html">Ссылка 1</a> |
+    <a href="link2.html">Ссылка 2</a> |
+    <a href="link3.html">Ссылка 3</a>
+</p>
+<p>
+    <a href="link1.html" class="bottomLink">Ссылка 1</a> |
+    <a href="link2.html" class="bottomLink">Ссылка 2</a> |
+    <a href="link3.html" class="bottomLink">Ссылка 3</a>
+</p>
+</body>
+</html>

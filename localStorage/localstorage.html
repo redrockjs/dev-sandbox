@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let state = {
+        city: "Sochi",
+        school: 15,
+        class: [{id: 0, name: "Katya"}]
+    }
+
+    console.log(state)
+
+    let obj1 = {id: 1, name: "Anna"}
+    localStorage.setItem( obj1.id, JSON.stringify(obj1))
+    let obj2 = {id: 2, name: "Darya"}
+    localStorage.setItem( obj2.id, JSON.stringify(obj2))
+    let obj3 = {id: 3, name: "Elena"}
+    localStorage.setItem( obj3.id, JSON.stringify(obj3))
+    let arr = []
+    for (let key in localStorage) {
+        if (!localStorage.hasOwnProperty(key)) {
+            continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
+        }
+        console.log(localStorage.getItem(key))
+        arr = [...arr, JSON.parse(localStorage.getItem(key))]
+    }
+    console.log(arr)
+
+    state = {
+        ...state,
+        class: [...state.class, ...arr]
+    }
+    console.log(state)
+
+</script>
+
+</body>
+</html>

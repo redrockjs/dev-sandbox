@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Grid</title>
+	<style>
+		* {padding: 0; margin: 0}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: 70% 30%;
+			/* grid-column-gap: 1em;
+			grid-row-gap: 1em; */
+
+			grid-gap: 1em;
+		 }
+
+		.wrapper > div{
+			padding: 1em;
+			background-color: #ee6375;
+		}
+
+		.wrapper > div.light {
+			padding: 1em;
+			background-color: #ecc6cb;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima animi, tempore. Vitae consectetur voluptate inventore soluta totam iste dicta neque nesciunt a! Incidunt aliquid quae eveniet blanditiis, laudantium assumenda natus doloribus, fuga mollitia debitis dolorem, soluta asperiores accusamus. Qui, necessitatibus autem doloremque corporis eligendi dolorum natus, eius aperiam consequatur aliquid, quaerat excepturi sequi repellendus, tempora cum sed velit. A voluptates laboriosam quibusdam consequatur quas harum unde sint minus, molestiae quo?
+		</div>
+		<div class="light">
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nostrum animi, aliquid consequuntur iusto esse nulla accusamus commodi perferendis deserunt ipsa quidem, illo quam minima aspernatur vero natus?
+		</div>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima animi, tempore. Vitae consectetur voluptate inventore soluta totam iste dicta neque nesciunt a! Incidunt aliquid quae eveniet blanditiis, laudantium assumenda natus doloribus, fuga mollitia debitis dolorem, soluta asperiores accusamus. Qui, necessitatibus autem doloremque corporis eligendi dolorum natus, eius aperiam consequatur aliquid, quaerat excepturi sequi repellendus, tempora cum sed velit. A voluptates laboriosam quibusdam consequatur quas harum unde sint minus, molestiae quo?
+		</div>
+		<div class="light">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nostrum animi, aliquid consequuntur iusto esse nulla accusamus commodi perferendis deserunt ipsa quidem, illo quam minima aspernatur vero natus?
+		</div>
+	</div>
+</body>
+</html>

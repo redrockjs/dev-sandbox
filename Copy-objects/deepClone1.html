@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep copy</title>
+</head>
+<body>
+
+<script>
+    source = {
+        id: 1,
+        name: "Sochi",
+        coord: { lat: 45.77, lon: 39.12 },
+        wind: { speed: 15, deg: 270 },
+        visibility: 10000
+    }
+
+    current = {
+        ...source,
+        id: 2,
+        name:"Moscow",
+        coord: {
+            ...source.coord },
+        wind:{
+            ...source.wind,
+            deg: 45 },
+        visibility: 5000
+    }
+
+    console.log(source);
+
+    console.log(current)
+
+
+
+
+</script>
+
+</body>
+</html>

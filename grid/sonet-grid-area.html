@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Grid</title>
+	<style>
+		.wrapper {
+			display: grid;
+			grid: "hl hr"
+             	  "n m"
+             	  "f f";
+			grid-gap: 10px;
+       		grid-template-columns: 200px auto;
+			grid-template-rows: 3em 50% 3em; 
+		}
+ 
+		.header-l {
+			grid-area: hl;
+			background-color: darkred;
+
+		}
+
+		.header-r {
+			grid-area: hr;
+			background-color: firebrick;
+		}
+
+		.nav {
+			grid-area: n;
+			background-color: chocolate;
+		}
+
+		.main {
+			grid-area: m;
+			background-color: lemonchiffon;
+		}
+		.footer {
+			grid-area: f;
+			background-color: magenta;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header-l">Header-L</div>
+		<div class="header-r">Header-R</div>
+		<div class="nav">  Nav</div>
+		<div class="main"> Main</div>
+		<div class="footer"> Footer</div>
+	</div>
+</body>
+</html>
