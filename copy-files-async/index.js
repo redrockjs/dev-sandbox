@@ -9,35 +9,25 @@ function copyFolder(source, target) {
         .then(files => {
             return new Promise( resolve => {
                 files.forEach(file => {
-                    //console.log(file.name)
+
                     if (file.isDirectory()) {
-                        fsp.mkdir(target + file.name, {recursive: true})
-                            //.then(() => copyFolder(target, target + file.name))
+                        console.log(file.name)
+                         fsp.mkdir(target +'/'+ file.name, {recursive: true})
+                             .then(() => copyFolder(source +'/'+ file.name, target +'/'+ file.name))
                     }
                 });
                 resolve()
-            }).then( ()=>{
+             })
+            .then( ()=>{
                 files.forEach(file => {
-                    console.log(file.name)
                     if (file.isFile()) {
-                        fsp.copyFile(source + file.name, target + file.name, 1)
+                        //console.log(file.name)
+                        fsp.copyFile(source +'/'+ file.name, target +'/'+ file.name, 1)
                             .then(() => console.log(file.name + ' copy result - ok!'))
                             .catch(err => console.log('Copy failed by reason', err));
                     }
                 });
             })
-
-
-            //else {
-            //console.log(file.name)
-            // fsp.copyFile(source + file.name, target + file.name, 1)
-            //     .then(() => console.log(file.name + ' copy result - ok!'))
-            //     .catch(err => console.log('Copy failed by reason', err));
-            //}
-            // fsp.copyFile(__dirname + sourceDir + file.name, __dirname + targetDir + file.name, 1)
-            //     .then(() => console.log(file.name + ' copy result - ok!'))
-            //     .catch(err => console.log('Copy failed by reason', err.code));
-
         })
         .catch(err => {
             if (err !== undefined) console.log(err);
