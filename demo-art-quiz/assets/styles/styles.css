@@ -1,0 +1,64 @@
+@import url("reset.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("main.css");
+@import url("settings.css");
+@import url("categories.css");
+@import url("pictures.css");
+@import url("artists.css");
+@import url("components.css");
+
+
+body {
+    background: #000000;
+    background-attachment: fixed;
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    font-family: sans-serif;
+}
+
+.no-bg{
+    background-image: none;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+/* Some common styles */
+
+.header-questions{
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.header-timer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly
+    width: 800px;
+}
+.timer-cancel{
+    padding: 0 10px;
+    line-height: 1;
+}
+
+.timer-progressbar-block{
+
+}
+
+.timer-progressbar{
+    width: 38vw;
+
+}
+
+.timer-counter{
+    padding: 0 10px;
+}

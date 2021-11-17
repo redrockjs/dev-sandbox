@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>LIGHTBOX</title>
+    <style>
+        .popup-overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            padding: 10px;
+            border: 1px solid gray;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+        .popup-closer{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 16px;
+            z-index: 1002;
+            overflow: auto;
+            cursor: pointer;
+        }
+        .popup-show{
+            display: block;
+        }
+        .open-popup,
+        .close-popup{
+            cursor: pointer;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+
+    <script>
+
+        const popupContent = document.querySelector('.popup-content');
+        const popupOverlay = document.querySelector('.popup-overlay');
+
+        const openPopup = document.querySelector('.open-popup')
+        const closePopup = document.querySelector('.close-popup')
+
+        function popupSwitcher(){
+            //e.stopPropagation();
+            console.log('!!!')
+            // popupContent.classList.toggle('popup-show');
+            // popupOverlay.classList.toggle('popup-show');
+        }
+
+        openPopup.addEventListener('click',()=>{
+            console.log('!!!')
+           // popupSwitcher()
+        })
+        closePopup.addEventListener('click',()=>{
+            //popupSwitcher()
+        })
+        // document.addEventListener('click', (e) => {
+        //     if (!popupContent.contains(e.target)) {
+        //         popupContent.classList.remove('show')
+        //     }
+        // });
+    </script>
+</head>
+
+<body>
+<p>
+    This is the main content. To display a lightbox click
+    <span class="open-popup"> here </span>
+</p>
+
+<div class="popup-content">
+    This is the lightbox content.
+
+    <div class="popup-closer">
+        <span class="close-popup"> &#9587; </span>
+    </div>
+</div>
+
+<div class="popup-overlay"></div>
+</body>
+
+</html>

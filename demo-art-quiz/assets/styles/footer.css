@@ -1,0 +1,12 @@
+.footer {
+    height: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-block {
+    padding: 10px 50px;
+}

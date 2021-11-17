@@ -1,0 +1,215 @@
+.settings {
+    color: white;
+    padding: 0 20px;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+    width: 100%;
+}
+
+.settings-volume {
+    padding: 1.8em;
+}
+
+.settings-volume-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.settings-time {
+    padding: 1.8em;
+}
+
+.settings-answer {
+    padding: 1.8em;
+}
+.settings-answer-button{
+    background: none;
+    border: none;
+    padding: 7px;
+}
+.settings-answer-controls {
+    display: flex;
+    align-items: flex-end;
+}
+
+.settings-answer-counter{
+    padding: 12px;
+}
+
+.settings-buttons {
+    padding: 1.8em;
+    align-self: flex-end;
+}
+
+.settings-button-default{
+    border: 2px solid #FFFFFF;
+    background: none;
+    border-radius: 30px;
+    margin: 0 10px;
+    padding: 10px 50px;
+    color: #FFFFFF;
+}
+
+.settings-button-save{
+    border: 2px solid #FFBCA2;
+    background: #FFBCA2;
+    border-radius: 30px;
+    margin: 0 10px;
+    padding: 10px 50px;
+    color: #000000;
+}
+
+.checkbox-item {
+    cursor: pointer;
+    position: relative;
+    /*width: 128px;*/
+}
+.checkbox-item > input,
+.checkbox-item > div,
+.checkbox-item > label {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+}
+.checkbox-item > label > span.on {
+    color: #FFBCA2;
+}
+.checkbox-item > label > span.off {
+    color: #999999;
+}
+
+.checkbox-item > div {
+    --switch-width: 50px;
+    --switch-height: 22px;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    border-radius: var(--switch-height);
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+}
+.checkbox-item input:checked ~ div {
+    transition: background-color 0.3s;
+}
+.checkbox-item input:not(:checked) ~ div {
+    transition: background-color 0.3s 0.3s;
+}
+.checkbox-item > div::before,
+.checkbox-item > div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: var(--switch-height);
+    height: var(--switch-height);
+    background-color: white;
+    border-radius: 50%;
+}
+.checkbox-item > div::before {
+    left: 0;
+}
+.checkbox-item > div::after {
+    right: 0;
+}
+.checkbox-item input:checked ~ div::before {
+    transform: scale(0.8) translateY(50px);
+}
+
+.checkbox-item input:checked ~ div::after {
+    transform: scale(0.8) translateY(0);
+}
+
+.checkbox-item input:not(:checked) ~ div::before {
+    transform: scale(0.8) translateY(0px);
+}
+
+.checkbox-item input:not(:checked) ~ div::after {
+    transform: scale(0.8) translateY(-50px);
+}
+
+.checkbox-item input:not(:checked) ~ div {
+    background-color: lightgray;
+}
+
+.checkbox-item input:checked ~ div {
+    background-color: #FFBCA2;
+}
+
+.checkbox-item input:not(:checked) ~ div {
+    background-color: #999999;
+}
+
+.checkbox-item > input {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin: 0;
+    height: 100%;
+    z-index: 19;
+}
+
+.checkbox-item > label {
+    position: relative;
+    padding-left: 19px;
+    transition: padding-left 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.checkbox-item input:checked ~ label {
+    padding-left: 19px;
+}
+
+.checkbox-item > label > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.checkbox-item > label > span.on {
+    transform: translateY(0px);
+}
+
+.checkbox-item > label > span.off {
+    transform: translateY(20px);
+}
+
+.checkbox-item input:checked ~ div::before,
+.checkbox-item input:checked ~ div::after,
+.checkbox-item input:checked ~ label > span {
+    transition: transform 0.3s 0s;
+}
+
+.checkbox-item input:not(:checked) ~ div::before,
+.checkbox-item input:not(:checked) ~ div::after,
+.checkbox-item input:not(:checked) ~ label > span {
+    transition: transform 0.3s 0.3s;
+}
+
+.checkbox-item input:checked ~ label > span.on {
+    transform: translateY(0px);
+}
+
+.checkbox-item input:checked ~ label > span.off {
+    transform: translateY(20px);
+}
+
+.checkbox-item input:not(:checked) ~ label > span.on {
+    transform: translateY(-20px);
+}
+
+.checkbox-item input:not(:checked) ~ label > span.off {
+    transform: translateY(0px);
+}

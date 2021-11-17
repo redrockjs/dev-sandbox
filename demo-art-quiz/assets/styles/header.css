@@ -1,0 +1,14 @@
+.header {
+    height: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+    padding: 50px 50px;
+}
