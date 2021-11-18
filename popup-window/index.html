@@ -15,6 +15,7 @@
             opacity: .80;
             filter: alpha(opacity=80);
         }
+
         .popup-content {
             display: none;
             position: absolute;
@@ -28,7 +29,8 @@
             z-index: 1002;
             overflow: auto;
         }
-        .popup-closer{
+
+        .popup-closer {
             position: absolute;
             top: 0;
             right: 0;
@@ -37,45 +39,19 @@
             overflow: auto;
             cursor: pointer;
         }
-        .popup-show{
+
+        .popup-show {
             display: block;
         }
+
         .open-popup,
-        .close-popup{
+        .close-popup {
             cursor: pointer;
             font-weight: bold;
             color: red;
         }
     </style>
 
-    <script>
-
-        const popupContent = document.querySelector('.popup-content');
-        const popupOverlay = document.querySelector('.popup-overlay');
-
-        const openPopup = document.querySelector('.open-popup')
-        const closePopup = document.querySelector('.close-popup')
-
-        function popupSwitcher(){
-            //e.stopPropagation();
-            console.log('!!!')
-            // popupContent.classList.toggle('popup-show');
-            // popupOverlay.classList.toggle('popup-show');
-        }
-
-        openPopup.addEventListener('click',()=>{
-            console.log('!!!')
-           // popupSwitcher()
-        })
-        closePopup.addEventListener('click',()=>{
-            //popupSwitcher()
-        })
-        // document.addEventListener('click', (e) => {
-        //     if (!popupContent.contains(e.target)) {
-        //         popupContent.classList.remove('show')
-        //     }
-        // });
-    </script>
 </head>
 
 <body>
@@ -93,6 +69,29 @@
 </div>
 
 <div class="popup-overlay"></div>
+<script>
+    const popupContent = document.querySelector('.popup-content');
+    const popupOverlay = document.querySelector('.popup-overlay');
+
+    const openPopup = document.querySelector('.open-popup')
+    const closePopup = document.querySelector('.close-popup')
+
+    function popupSwitcher(e) {
+        e.stopPropagation();
+        popupContent.classList.toggle('popup-show');
+        popupOverlay.classList.toggle('popup-show');
+    }
+
+    openPopup.addEventListener('click', popupSwitcher)
+    closePopup.addEventListener('click', popupSwitcher)
+
+    document.addEventListener('click', (e) => {
+        if (!popupContent.contains(e.target)) {
+            popupContent.classList.remove('popup-show')
+            popupOverlay.classList.remove('popup-show')
+        }
+    });
+</script>
 </body>
 
 </html>

@@ -1,0 +1,604 @@
+@font-face {
+    font-family: 'Arial-MT';
+    src: url("../assets/fonts/Arial-MT.woff"); /* Путь к файлу со шрифтом */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 480px;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    /*background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);*/
+    background-blend-mode: multiply;
+    transition: background-image 1s ease-in-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 30vh;
+    min-height: 220px;
+    padding: 20px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+progress {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20px;
+    border: none;
+    overflow: hidden;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #0095dd; /* Internet Explorer uses this value as the progress bar's value colour */
+    cursor: pointer;
+}
+
+progress span {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: #FFFFFF;
+    transition: 0.25s;
+}
+
+progress::-moz-progress-bar {
+    background-color: #FFFFFF;
+    transition: 0.25s;
+}
+
+/* Chrome requires its own rule for this, otherwise it ignores it */
+progress::-webkit-progress-value {
+    background-color: #FFFFFF;
+    transition: 0.25s;
+}
+
+.currentTrack {
+    font-size: 12px;
+    text-align: start;
+    padding-bottom: 10px;
+}
+
+.currentTime {
+    font-size: 12px;
+    text-align: start;
+    padding-bottom: 10px;
+}
+
+.volume-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.volume {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mute {
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.volume-progress {
+    width: 100%;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+.volume-progress progress {
+    display: block;
+    width: 100%;
+    height: 5px;
+    border: none;
+    overflow: hidden;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #0095dd; /* Internet Explorer uses this value as the progress bar's value colour */
+    cursor: pointer;
+}
+
+.volume-progress progress span {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
+.volume-progress progress::-moz-progress-bar {
+    background-color: #FFFFFF;
+}
+
+/* Chrome requires its own rule for this, otherwise it ignores it */
+.volume-progress progress::-webkit-progress-value {
+    background-color: #FFFFFF;
+}
+
+/*******************/
+
+.play-list {
+    text-align: left;
+}
+
+.play-item {
+    position: relative;
+    padding: 5px;
+    padding-left: 20px;
+    list-style: none;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.play-item:hover {
+    opacity: 1;
+}
+
+.play-item::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-weight: 900;
+}
+
+.item-active::before {
+    color: #C5B358;
+}
+
+.player-icon,
+.slider-icon,
+.change-quote {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover {
+    opacity: 1;
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active {
+    border: 0;
+    outline: 0;
+    transform: scale(1.1);
+}
+
+.play {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("../assets/svg/play.svg");
+}
+
+.pause {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("../assets/svg/pause.svg");
+}
+
+.play-prev {
+    background-image: url("../assets/svg/play-prev.svg");
+}
+
+.play-next {
+    background-image: url("../assets/svg/play-next.svg");
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 5px;
+    width: 180px;
+    min-height: 180px;
+    text-align: left;
+}
+
+.weather-error {
+    margin-top: -10px;
+}
+
+.description-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.weather-icon {
+    font-size: 44px;
+}
+
+.city {
+    width: 170px;
+    height: 34px;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.city::placeholder {
+    font-size: 20px;
+    color: #fff;
+    opacity: .6;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    min-height: 260px;
+    padding: 20px;
+}
+
+.slider-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+}
+
+.slide-prev {
+    left: 20px;
+    background-image: url("../assets/svg/slider-prev.svg");
+}
+
+.slide-next {
+    right: 20px;
+    background-image: url("../assets/svg/slider-next.svg");
+}
+
+.time {
+    min-height: 124px;
+    margin-bottom: 10px;
+    font-family: 'Arial-MT';
+    font-size: 100px;
+    letter-spacing: -4px;
+}
+
+.date {
+    min-height: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.greeting-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    min-height: 48px;
+    width: 100vw;
+    font-size: 40px;
+}
+
+.greeting {
+    flex: 1;
+    padding: 10px;
+    text-align: right;
+}
+
+.name {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+    font-size: 40px;
+    text-align: left;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.name::placeholder {
+    color: #fff;
+    opacity: .6;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.bottom-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.bottom-left_icon-settings {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    height: 18px;
+    width: 18px;
+    transition: transform 0.15s linear;
+}
+
+.toggle:hover {
+    opacity: .8;
+}
+
+.bottom-left_label-settings {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/***********Settings menu*********/
+.settings {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    background: #ffffff;
+    border: 1px solid gray;
+    border-radius: 5px;
+    z-index: 10;
+    opacity: 0.9;
+    width: 500px;
+    height: 350px;
+    color: black;
+}
+.settings-name {
+    padding: 0 0 20px 5px;
+    font-weight: bold;
+}
+
+.show {
+    display: flex;
+    flex-direction: row;
+}
+
+.settings-nav {
+    width: 200px;
+    color: #000000;
+    text-align: start;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.settings-nav li {
+    margin: 5px 5px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    cursor: pointer;
+    color: #333333;
+}
+
+.settings-nav li.active {
+    font-weight: bold;
+}
+
+.settings-content {
+    display: none;
+    margin: 20px;
+}
+
+.show-content {
+    display: block;
+}
+
+.settings-content-inner {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.settings-save-btn-box{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #ddd;
+    color: #ddd;
+    text-decoration: none;
+    margin: 0px 10px 10px 0;
+    transition: all .6s;
+    min-width: 100px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #ddd;
+    color: #fff;
+}
+
+.settings-save-button {
+    color: #40b754;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid #40b754;
+    padding: 8px;
+}
+
+.settings-save-button:hover {
+    color: #fff;
+    background: #40b754;
+}
+
+.bottom-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    min-height: 160px;
+    padding: 20px;
+}
+
+.bottom-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.change-quote {
+    margin-bottom: 30px;
+    background-image: url("../assets/svg/reload.svg");
+}
+
+.quote {
+    min-height: 32px;
+}
+
+.author {
+    min-height: 20px;
+}
+
+@media (max-width: 768px) {
+    .time {
+        min-height: 80px;
+        font-size: 72px;
+    }
+
+    .greeting-container {
+        min-height: 40px;
+        font-size: 32px;
+    }
+
+    .greeting {
+        padding: 5px;
+    }
+
+    .name {
+        font-size: 32px;
+        padding: 5px;
+    }
+}
+
+.debug {
+    display: flex;
+    flex-direction: column;
+}
+
+.debug span {
+    cursor: pointer;
+}
+
+.debug button {
+    margin: 10px 0;
+    padding: 5px;
+    /*width: 30px;*/
+    /*height: 20px;*/
+}
+
+
+.radiocontrol input {
+    display: none;
+}
+
+.radiocontrol input + label {
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 32px;
+    padding-top: 4px;
+    position: relative;
+}
+
+.radiocontrol input:checked + label {
+    color: #40b754;
+    /*font-weight: bolder;*/
+}
+
+.radiocontrol {
+    margin: auto;
+    text-align: start;
+    font-family: 'Arial', sans-serif;
+}
+
+.radiocontrol label:before {
+    content: "";
+    top: 3px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: #40b754;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 0 18px #E0E0E0;
+}
+
+.radiocontrol input:checked + label:before {
+    border: 2px solid #40b754;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+
+.hidden-box{
+    opacity: 0;
+    transition: all 1s ease;
+}
+.active-box{
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.bottom-link{
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+}
