@@ -1,0 +1,20 @@
+{
+  "name": "create-js-app",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "yarn run webpack serve --open --config webpack.dev.js",
+    "start": "yarn run webpack --config webpack.dev.js",
+    "build": "yarn run webpack --config webpack.prod.js"
+  },
+  "dependencies": {
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-merge": "^5.8.0"
+  }
+}

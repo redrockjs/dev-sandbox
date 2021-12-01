@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "strictFunctionTypes": false,
+    "noImplicitThis": false,
+    "strictBindCallApply": false,
+    "sourceMap": true
+  }
+}
+//{
+//  "compilerOptions": {
+//    "alwaysStrict": true,
+//    "noImplicitAny": true,
+//    "strictNullChecks": true,
+//    "strictPropertyInitialization": true,
+//    "strictFunctionTypes": true,
+//    "noImplicitThis": true,
+//    "strictBindCallApply": true,
+//    "sourceMap": true
+//  }
+//}
