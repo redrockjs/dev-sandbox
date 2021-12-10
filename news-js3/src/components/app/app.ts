@@ -10,7 +10,6 @@ class App {
     }
 
     start() {
-        // @ts-expect-error ts-migrate(2531) FIXME: Object is possibly 'null'.
         document
             .querySelector('.sources')
             .addEventListener('click', (e) => this.controller.getNews(e, (data: any) => this.view.drawNews(data)));
