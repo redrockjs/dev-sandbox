@@ -2,19 +2,17 @@ import News from './news/news';
 import Sources from './sources/sources';
 
 export class AppView {
-    news: any;
-    sources: any;
     constructor() {
         this.news = new News();
         this.sources = new Sources();
     }
 
-    drawNews(data: any) {
+    drawNews(data) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data: any) {
+    drawSources(data) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }

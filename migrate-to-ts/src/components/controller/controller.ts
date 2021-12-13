@@ -1,23 +1,24 @@
-/* eslint-disable */
 import AppLoader from './appLoader';
+import {NewsDto} from "../view/news/newsDto";
 
 class AppController extends AppLoader {
-    getSources(callback) {
+    getSources(callback: (data?: Record<string, unknown>) => void) {
         super.getResp(
             {
                 endpoint: 'sources',
+                options: {}
             },
             callback
         );
     }
 
-    getNews(e, callback) {
-        let target = e.target;
-        const newsContainer = e.currentTarget;
+    getNews(e: Event, callback: (data: { articles: NewsDto[]; }) => void) {
+        let target = e.target as Node;
+        const newsContainer = e.currentTarget as HTMLElement;
 
         while (target !== newsContainer) {
-            if (target.classList.contains('source__item')) {
-                const sourceId = target.getAttribute('data-source-id');
+            if ((target as HTMLElement).classList.contains('source__item')) {
+                const sourceId = (target as HTMLElement).getAttribute('data-source-id');
                 if (newsContainer.getAttribute('data-source') !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
                     super.getResp(

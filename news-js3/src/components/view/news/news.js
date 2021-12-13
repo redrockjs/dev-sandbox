@@ -1,14 +1,13 @@
 import './news.css';
 
 class News {
-    draw(data: any) {
-        const news = data.length >= 10 ? data.filter((_item: any, idx: any) => idx < 10) : data;
+    draw(data) {
+        const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();
         const newsItemTemp = document.querySelector('#newsItemTemp');
 
-        news.forEach((item: any, idx: any) => {
-            // @ts-expect-error ts-migrate(2531) FIXME: Object is possibly 'null'.
+        news.forEach((item, idx) => {
             const newsClone = newsItemTemp.content.cloneNode(true);
 
             if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
@@ -31,9 +30,7 @@ class News {
             fragment.append(newsClone);
         });
 
-        // @ts-expect-error ts-migrate(2531) FIXME: Object is possibly 'null'.
         document.querySelector('.news').innerHTML = '';
-        // @ts-expect-error ts-migrate(2531) FIXME: Object is possibly 'null'.
         document.querySelector('.news').appendChild(fragment);
     }
 }
