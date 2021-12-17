@@ -64,7 +64,7 @@ const TSConfig = {
 
 module.exports = ({ mode }) => {
     const isProductionMode = mode === 'prod';
-    const isJSMode = true;
+    const isJSMode = false;
     const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
     const baseConfig = isJSMode ? JSConfig : TSConfig;

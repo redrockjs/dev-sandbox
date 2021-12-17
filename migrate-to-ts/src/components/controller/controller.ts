@@ -1,8 +1,9 @@
 import AppLoader from './appLoader';
 import {NewsDto} from "../view/news/newsDto";
+import {INews} from "../view/news/news.interface";
 
 class AppController extends AppLoader {
-    getSources(callback: (data?: Record<string, unknown>) => void) {
+    getSources(callback: (data:Record<string, string> ) => void) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -12,7 +13,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: (data: { articles: NewsDto[]; }) => void) {
+    getNews(e: Event, callback: (data: { articles:INews[]; }) => void) {
         let target = e.target as Node;
         const newsContainer = e.currentTarget as HTMLElement;
 

@@ -103,8 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-dist/
+node_modules
+dist
 
 .idea
-tmp
-bak
+.vscode

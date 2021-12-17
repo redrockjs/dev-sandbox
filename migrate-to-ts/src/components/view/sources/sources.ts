@@ -1,14 +1,12 @@
 import './sources.css';
-import {SourceDto} from "./sourceDto";
+import {ISources} from "./sources.interface";
 
 class Sources {
-    draw(data: Array<SourceDto>):void {
+    draw(data: ISources[]):void {
         const fragment = document.createDocumentFragment();
-        // const sourceItemTemp = document.querySelector('#sourceItemTemp');
         const sourceItemTemp = document.querySelector('#sourceItemTemp');
         data.forEach((item) => {
             const sourceClone = (sourceItemTemp as Node).cloneNode(true);
-
 
             (sourceClone as HTMLElement).querySelector('.source__item-name').textContent = item.name;
 

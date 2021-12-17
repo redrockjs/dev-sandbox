@@ -1,18 +1,18 @@
-import {NewsDto} from "../view/news/newsDto";
 import {IEndpoint} from "./endpoint.interface";
+import {INews} from "../view/news/news.interface";
 
 class Loader {
     baseLink: string;
     options: { [apiKey: string]: string };
 
-    constructor(baseLink: string, options:{ [apiKey: string]: string }) {
+    constructor( baseLink: string, options:{ [apiKey: string]: string }) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
     getResp(
         endpoint: IEndpoint,
-        callback = (data: { articles: NewsDto[]; }) => {
+        callback = (data: { articles: INews[]; }) => {
             console.error('No callback for GET response');
         }
     ) {
@@ -29,7 +29,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: Record<string, unknown>, endpoint: string):string {
+    makeUrl(options: Record<string, string>, endpoint: string):string {
         const urlOptions = {...this.options, ...options};
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -40,7 +40,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string|undefined, endpoint: IEndpoint, callback: (data: { articles: NewsDto[]; }) => void, options = {}) {
+    load(method: string, endpoint: IEndpoint, callback: (data: { articles: INews[]; }) => void, options = {}) {
         fetch(this.makeUrl(options, endpoint.endpoint), {method})
             .then(this.errorHandler)
             .then((res) => res.json())

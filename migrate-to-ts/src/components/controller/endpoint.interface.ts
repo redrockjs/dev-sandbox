@@ -1,4 +1,4 @@
 export interface IEndpoint {
     endpoint: string,
-    options: Record<string, unknown>
+    options: Record<string, string>
 }
