@@ -13,8 +13,12 @@
   },
   "dependencies": {
     "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.4",
     "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
   }
 }
