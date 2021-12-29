@@ -1,8 +1,8 @@
 import Page from "../../core/templates/page";
 
-class StatisticPage extends Page{
+class StatisticsPage extends Page{
     static TextObject = {
-        MainTitle: "Statistic"
+        MainTitle: "Statistics Page"
     }
 
     constructor(id:string) {
@@ -10,10 +10,10 @@ class StatisticPage extends Page{
     }
 
     render(){
-        const title = this.createHeaderTitle(StatisticPage.TextObject.MainTitle)
+        const title = this.createHeaderTitle(StatisticsPage.TextObject.MainTitle)
         this.container.append(title)
         return this.container
     }
 }
 
-export default StatisticPage
+export default StatisticsPage
