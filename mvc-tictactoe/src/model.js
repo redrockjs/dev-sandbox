@@ -20,6 +20,7 @@ class TicTacToe {
     this.finished = this.victory() || this.draw();
 
     if (!this.finished) { this.switchPlayer(); }
+    console.log('onModel play');
 
     return true;
   }

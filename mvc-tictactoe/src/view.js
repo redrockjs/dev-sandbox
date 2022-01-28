@@ -16,6 +16,7 @@ class View {
 
       cell.addEventListener('click', () => {
         this.playEvent.trigger(i);
+        console.log('onView click');
       });
 
       board.appendChild(cell);

@@ -1,19 +1,27 @@
-import EventEmitter from "../helpers/eventemitter";
+import Event from "../helpers/event";
 
-class Model{
-    private counter : number
+class Model {
+    private _counter: number
+    private counterEvent: Event;
+
     constructor() {
-        this.counter = 0;
+        this._counter = 0;
+        this.counterEvent = new Event();
     }
 
-    inc(){
-        this.counter += 1;
-        EventEmitter.emit('inc');
+    getNumber(){
+        this.counterEvent.trigger('get');
+        return this._counter;
     }
 
-    dec(){
-        this.counter -= 1;
-        EventEmitter.emit('dec');
+    inc() {
+        this._counter += 1;
+        this.counterEvent.trigger('inc');
+    }
+
+    dec() {
+        this._counter -= 1;
+        this.counterEvent.trigger('dec');
     }
 
 }

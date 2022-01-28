@@ -1,22 +1,47 @@
-import Button from "./button";
-import Span from "./span";
+// import ButtonMinus from "./buttonMinus";
+// import ButtonPlus from "./buttonPlus";
+// import Span from "./span";
+import Event from "../helpers/event";
 
 class View {
-    private buttonMinus: Button;
-    private buttonPlus: Button;
-    private span: Span;
+    private clickPlus: Event;
 
     constructor() {
-        this.buttonMinus = new Button('-','button');
-        this.buttonPlus = new Button('+','button')
-        this.span = new Span('0','label')
+        this.clickPlus = new Event();
     }
 
     render() {
+        const btnMinus: HTMLElement = document.createElement('button')
+        btnMinus.innerHTML = '-';
+        btnMinus.className = 'button button-minus';
 
-        this.buttonMinus.render();
-        this.span.render()
-        this.buttonPlus.render();
+        const textResult: HTMLElement = document.createElement('span')
+        textResult.innerHTML = '0';
+        textResult.className = 'text-result';
+        document.body.appendChild(textResult);
+
+        const btnPlus: HTMLElement = document.createElement('button')
+        btnPlus.innerHTML = '+';
+        btnPlus.className = 'button button-plus';
+
+        document.body.appendChild(btnMinus);
+        document.body.appendChild(textResult);
+        document.body.appendChild(btnPlus);
+
+        const btnPlusHandle = document.querySelector('.button-plus');
+        if (btnPlusHandle) {
+            btnPlusHandle.addEventListener('click', () => {
+                console.log('click on plus');
+                this.clickPlus.trigger('inc');
+            })
+        }
+    }
+
+    updateResult(data) {
+        const resultHandle = document.querySelector('.span');
+        if (resultHandle) {
+            resultHandle.innerHTML = data;
+        }
     }
 }
 

@@ -1,19 +1,19 @@
-class EventEmitter {
+class Event {
     listeners: Array<Function>;
-    static on;
-    static emit;
+    static addListener;
+    static trigger;
 
     constructor() {
         this.listeners = [];
     }
 
-    on(listener) {
+    addListener(listener) {
         this.listeners.push(listener);
     }
 
-    emit(params) {
+    trigger(params) {
         this.listeners.forEach(listener => listener(params));
     }
 }
 
-export default EventEmitter;
+export default Event;
