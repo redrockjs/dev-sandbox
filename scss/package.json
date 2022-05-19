@@ -1,0 +1,12 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "yarn sass --watch assets/scss/index.scss:assets/css/index.css"
+  },
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
