@@ -1,0 +1,120 @@
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-bottom: 105px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: start;
+    width: 646px;
+    padding-left: 29px;
+  }
+
+  &__header {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 74px;
+    letter-spacing: -0.03em;
+    color: #000000;
+    padding-bottom: 19px;
+  }
+
+  &__text {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #64607D;
+    padding-bottom: 47px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+
+  &__our-btn {
+    width: 162px;
+    height: 60px;
+    background: #3734A9;
+    border: 0;
+    border-radius: 47px;
+    margin-right: 50px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+
+  &__seenow {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #3734A9;
+    padding-left: 11px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-left: 35px;
+  }
+
+  &__invitation {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #3734A9;
+    margin-bottom: 22px;
+  }
+
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid #DFE4F1;
+    border-radius: 5px;
+    height: 60px;
+    width: 356px;
+    margin-bottom: 24px;
+    padding-left: 21px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #64607D;
+    opacity: 0.4;
+  }
+
+  &__form-btn {
+    background-color: #FF7F5C;
+    color: #FFFFFF;
+    border: 0;
+    height: 60px;
+    width: 100%;
+  }
+}

@@ -45,208 +45,211 @@ table {
 
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Regular.eot");
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("Gilroy-Regular.woff2") format("woff2"), url("Gilroy-Regular.woff") format("woff"), url("Gilroy-Regular.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-ExtraboldItalic.eot");
-  src: local("Gilroy Extrabold Italic"), local("Gilroy-ExtraboldItalic"), url("Gilroy-ExtraboldItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-ExtraboldItalic.woff2") format("woff2"), url("Gilroy-ExtraboldItalic.woff") format("woff"), url("Gilroy-ExtraboldItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-ExtraboldItalic.eot");
+  src: local("Gilroy Extrabold Italic"), local("Gilroy-ExtraboldItalic"), url("../fonts/Gilroy-ExtraboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ExtraboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-ExtraboldItalic.woff") format("woff"), url("../fonts/Gilroy-ExtraboldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Bold.eot");
-  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("Gilroy-Bold.woff2") format("woff2"), url("Gilroy-Bold.woff") format("woff"), url("Gilroy-Bold.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Black.eot");
-  src: local("Gilroy Black"), local("Gilroy-Black"), url("Gilroy-Black.eot?#iefix") format("embedded-opentype"), url("Gilroy-Black.woff2") format("woff2"), url("Gilroy-Black.woff") format("woff"), url("Gilroy-Black.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Black.eot");
+  src: local("Gilroy Black"), local("Gilroy-Black"), url("../fonts/Gilroy-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Light.eot");
-  src: local("Gilroy Light"), local("Gilroy-Light"), url("Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("Gilroy-Light.woff2") format("woff2"), url("Gilroy-Light.woff") format("woff"), url("Gilroy-Light.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Semibold.eot");
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), url("Gilroy-Semibold.woff2") format("woff2"), url("Gilroy-Semibold.woff") format("woff"), url("Gilroy-Semibold.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Semibold.eot");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Medium.eot");
-  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("Gilroy-Medium.woff2") format("woff2"), url("Gilroy-Medium.woff") format("woff"), url("Gilroy-Medium.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-MediumItalic.eot");
-  src: local("Gilroy Medium Italic"), local("Gilroy-MediumItalic"), url("Gilroy-MediumItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-MediumItalic.woff2") format("woff2"), url("Gilroy-MediumItalic.woff") format("woff"), url("Gilroy-MediumItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-MediumItalic.eot");
+  src: local("Gilroy Medium Italic"), local("Gilroy-MediumItalic"), url("../fonts/Gilroy-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-MediumItalic.woff2") format("woff2"), url("../fonts/Gilroy-MediumItalic.woff") format("woff"), url("../fonts/Gilroy-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-BlackItalic.eot");
-  src: local("Gilroy Black Italic"), local("Gilroy-BlackItalic"), url("Gilroy-BlackItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-BlackItalic.woff2") format("woff2"), url("Gilroy-BlackItalic.woff") format("woff"), url("Gilroy-BlackItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-BlackItalic.eot");
+  src: local("Gilroy Black Italic"), local("Gilroy-BlackItalic"), url("../fonts/Gilroy-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("../fonts/Gilroy-BlackItalic.woff") format("woff"), url("../fonts/Gilroy-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-UltraLight.eot");
-  src: local("Gilroy UltraLight"), local("Gilroy-UltraLight"), url("Gilroy-UltraLight.eot?#iefix") format("embedded-opentype"), url("Gilroy-UltraLight.woff2") format("woff2"), url("Gilroy-UltraLight.woff") format("woff"), url("Gilroy-UltraLight.ttf") format("truetype");
+  src: url("../fonts/Gilroy-UltraLight.eot");
+  src: local("Gilroy UltraLight"), local("Gilroy-UltraLight"), url("../fonts/Gilroy-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-UltraLight.woff2") format("woff2"), url("../fonts/Gilroy-UltraLight.woff") format("woff"), url("../fonts/Gilroy-UltraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-RegularItalic.eot");
-  src: local("Gilroy Regular Italic"), local("Gilroy-RegularItalic"), url("Gilroy-RegularItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-RegularItalic.woff2") format("woff2"), url("Gilroy-RegularItalic.woff") format("woff"), url("Gilroy-RegularItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-RegularItalic.eot");
+  src: local("Gilroy Regular Italic"), local("Gilroy-RegularItalic"), url("../fonts/Gilroy-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("../fonts/Gilroy-RegularItalic.woff") format("woff"), url("../fonts/Gilroy-RegularItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-SemiboldItalic.eot");
-  src: local("Gilroy Semibold Italic"), local("Gilroy-SemiboldItalic"), url("Gilroy-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-SemiboldItalic.woff2") format("woff2"), url("Gilroy-SemiboldItalic.woff") format("woff"), url("Gilroy-SemiboldItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-SemiboldItalic.eot");
+  src: local("Gilroy Semibold Italic"), local("Gilroy-SemiboldItalic"), url("../fonts/Gilroy-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-SemiboldItalic.woff") format("woff"), url("../fonts/Gilroy-SemiboldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-HeavyItalic.eot");
-  src: local("Gilroy Heavy Italic"), local("Gilroy-HeavyItalic"), url("Gilroy-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-HeavyItalic.woff2") format("woff2"), url("Gilroy-HeavyItalic.woff") format("woff"), url("Gilroy-HeavyItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-HeavyItalic.eot");
+  src: local("Gilroy Heavy Italic"), local("Gilroy-HeavyItalic"), url("../fonts/Gilroy-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff"), url("../fonts/Gilroy-HeavyItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Extrabold.eot");
-  src: local("Gilroy Extrabold"), local("Gilroy-Extrabold"), url("Gilroy-Extrabold.eot?#iefix") format("embedded-opentype"), url("Gilroy-Extrabold.woff2") format("woff2"), url("Gilroy-Extrabold.woff") format("woff"), url("Gilroy-Extrabold.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Extrabold.eot");
+  src: local("Gilroy Extrabold"), local("Gilroy-Extrabold"), url("../fonts/Gilroy-Extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-BoldItalic.eot");
-  src: local("Gilroy Bold Italic"), local("Gilroy-BoldItalic"), url("Gilroy-BoldItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-BoldItalic.woff2") format("woff2"), url("Gilroy-BoldItalic.woff") format("woff"), url("Gilroy-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-BoldItalic.eot");
+  src: local("Gilroy Bold Italic"), local("Gilroy-BoldItalic"), url("../fonts/Gilroy-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-BoldItalic.woff2") format("woff2"), url("../fonts/Gilroy-BoldItalic.woff") format("woff"), url("../fonts/Gilroy-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-UltraLightItalic.eot");
-  src: local("Gilroy UltraLight Italic"), local("Gilroy-UltraLightItalic"), url("Gilroy-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-UltraLightItalic.woff2") format("woff2"), url("Gilroy-UltraLightItalic.woff") format("woff"), url("Gilroy-UltraLightItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-UltraLightItalic.eot");
+  src: local("Gilroy UltraLight Italic"), local("Gilroy-UltraLightItalic"), url("../fonts/Gilroy-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-UltraLightItalic.woff2") format("woff2"), url("../fonts/Gilroy-UltraLightItalic.woff") format("woff"), url("../fonts/Gilroy-UltraLightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-LightItalic.eot");
-  src: local("Gilroy Light Italic"), local("Gilroy-LightItalic"), url("Gilroy-LightItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-LightItalic.woff2") format("woff2"), url("Gilroy-LightItalic.woff") format("woff"), url("Gilroy-LightItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-LightItalic.eot");
+  src: local("Gilroy Light Italic"), local("Gilroy-LightItalic"), url("../fonts/Gilroy-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff"), url("../fonts/Gilroy-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Heavy.eot");
-  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url("Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("Gilroy-Heavy.woff2") format("woff2"), url("Gilroy-Heavy.woff") format("woff"), url("Gilroy-Heavy.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Heavy.eot");
+  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Thin.eot");
-  src: local("Gilroy Thin"), local("Gilroy-Thin"), url("Gilroy-Thin.eot?#iefix") format("embedded-opentype"), url("Gilroy-Thin.woff2") format("woff2"), url("Gilroy-Thin.woff") format("woff"), url("Gilroy-Thin.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Thin.eot");
+  src: local("Gilroy Thin"), local("Gilroy-Thin"), url("../fonts/Gilroy-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff"), url("../fonts/Gilroy-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-ThinItalic.eot");
-  src: local("Gilroy Thin Italic"), local("Gilroy-ThinItalic"), url("Gilroy-ThinItalic.eot?#iefix") format("embedded-opentype"), url("Gilroy-ThinItalic.woff2") format("woff2"), url("Gilroy-ThinItalic.woff") format("woff"), url("Gilroy-ThinItalic.ttf") format("truetype");
+  src: url("../fonts/Gilroy-ThinItalic.eot");
+  src: local("Gilroy Thin Italic"), local("Gilroy-ThinItalic"), url("../fonts/Gilroy-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("../fonts/Gilroy-ThinItalic.woff") format("woff"), url("../fonts/Gilroy-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Bold.eot");
-  src: local("Manrope Bold"), local("Manrope-Bold"), url("Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("Manrope-Bold.woff2") format("woff2"), url("Manrope-Bold.woff") format("woff"), url("Manrope-Bold.ttf") format("truetype");
+  src: url("../fonts/Manrope-Bold.eot");
+  src: local("Manrope Bold"), local("Manrope-Bold"), url("../fonts/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff"), url("../fonts/Manrope-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Semibold.eot");
-  src: local("Manrope Semibold"), local("Manrope-Semibold"), url("Manrope-Semibold.eot?#iefix") format("embedded-opentype"), url("Manrope-Semibold.woff2") format("woff2"), url("Manrope-Semibold.woff") format("woff"), url("Manrope-Semibold.ttf") format("truetype");
+  src: url("../fonts/Manrope-Semibold.eot");
+  src: local("Manrope Semibold"), local("Manrope-Semibold"), url("../fonts/Manrope-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Semibold.woff2") format("woff2"), url("../fonts/Manrope-Semibold.woff") format("woff"), url("../fonts/Manrope-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Regular.eot");
-  src: local("Manrope Regular"), local("Manrope-Regular"), url("Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("Manrope-Regular.woff2") format("woff2"), url("Manrope-Regular.woff") format("woff"), url("Manrope-Regular.ttf") format("truetype");
+  src: url("../fonts/Manrope-Regular.eot");
+  src: local("Manrope Regular"), local("Manrope-Regular"), url("../fonts/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff"), url("../fonts/Manrope-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Light.eot");
-  src: local("Manrope Light"), local("Manrope-Light"), url("Manrope-Light.eot?#iefix") format("embedded-opentype"), url("Manrope-Light.woff2") format("woff2"), url("Manrope-Light.woff") format("woff"), url("Manrope-Light.ttf") format("truetype");
+  src: url("../fonts/Manrope-Light.eot");
+  src: local("Manrope Light"), local("Manrope-Light"), url("../fonts/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff"), url("../fonts/Manrope-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Thin.eot");
-  src: local("Manrope Thin"), local("Manrope-Thin"), url("Manrope-Thin.eot?#iefix") format("embedded-opentype"), url("Manrope-Thin.woff2") format("woff2"), url("Manrope-Thin.woff") format("woff"), url("Manrope-Thin.ttf") format("truetype");
+  src: url("../fonts/Manrope-Thin.eot");
+  src: local("Manrope Thin"), local("Manrope-Thin"), url("../fonts/Manrope-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Thin.woff2") format("woff2"), url("../fonts/Manrope-Thin.woff") format("woff"), url("../fonts/Manrope-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-Medium.eot");
-  src: local("Manrope Medium"), local("Manrope-Medium"), url("Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("Manrope-Medium.woff2") format("woff2"), url("Manrope-Medium.woff") format("woff"), url("Manrope-Medium.ttf") format("truetype");
+  src: url("../fonts/Manrope-Medium.eot");
+  src: local("Manrope Medium"), local("Manrope-Medium"), url("../fonts/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff"), url("../fonts/Manrope-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("Manrope-ExtraBold.eot");
-  src: local("Manrope ExtraBold"), local("Manrope-ExtraBold"), url("Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("Manrope-ExtraBold.woff2") format("woff2"), url("Manrope-ExtraBold.woff") format("woff"), url("Manrope-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/Manrope-ExtraBold.eot");
+  src: local("Manrope ExtraBold"), local("Manrope-ExtraBold"), url("../fonts/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff"), url("../fonts/Manrope-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 131px;
 }
 .header__logo {
-  text-transform: capitalize;
   font-family: Manrope, sans-serif;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .header__menulist {
   display: flex;
@@ -254,11 +257,319 @@ table {
   justify-content: center;
 }
 .header__menuitem {
-  text-transform: capitalize;
   font-family: Manrope, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  text-transform: capitalize;
   padding: 0 10px;
+}
+.header__signin {
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 49px;
+}
+.header__signin-btn {
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 16px 35px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #4F46BA;
+}
+
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-bottom: 105px;
+}
+.start__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: start;
+  width: 646px;
+  padding-left: 29px;
+}
+.start__header {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 74px;
+  letter-spacing: -0.03em;
+  color: #000000;
+  padding-bottom: 19px;
+}
+.start__text {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #64607D;
+  padding-bottom: 47px;
+}
+.start__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.start__our-btn {
+  width: 162px;
+  height: 60px;
+  background: #3734A9;
+  border: 0;
+  border-radius: 47px;
+  margin-right: 50px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.start__seenow {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #3734A9;
+  padding-left: 11px;
+}
+.start__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 35px;
+}
+.start__invitation {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #3734A9;
+  margin-bottom: 22px;
+}
+.start__input {
+  background: #FFFFFF;
+  border: 1px solid #DFE4F1;
+  border-radius: 5px;
+  height: 60px;
+  width: 356px;
+  margin-bottom: 24px;
+  padding-left: 21px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #64607D;
+  opacity: 0.4;
+}
+.start__form-btn {
+  background-color: #FF7F5C;
+  color: #FFFFFF;
+  border: 0;
+  height: 60px;
+  width: 100%;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 112px;
+}
+.companies__heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 36px;
+}
+.companies__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.companies__item {
+  padding: 0 25px 0 25px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about__heading {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 60px;
+  letter-spacing: -0.03em;
+  color: #000000;
+  padding-bottom: 13px;
+}
+.about__text {
+  max-width: 604px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #64607D;
+  padding-bottom: 25px;
+}
+.about__btn {
+  width: 549px;
+  height: 48px;
+  background: #3734A9;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__top {
+  margin-top: 123px;
+  margin-bottom: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+}
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0 30px;
+}
+.footer__block-first {
+  width: 213px;
+}
+.footer__block-last {
+  width: 239px;
+}
+.footer__heading {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #1B1C31;
+  margin-bottom: 18px;
+}
+.footer__subtext {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #757095;
+}
+.footer__navitem {
+  padding-bottom: 12px;
+}
+.footer__navlink {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #181433;
+  text-decoration: none;
+}
+.footer__form {
+  padding-bottom: 21px;
+}
+.footer__input {
+  width: 249px;
+  height: 52px;
+  border: 0;
+  background-color: #F9F9F9;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: #181433;
+  opacity: 0.2;
+}
+.footer__join-btn {
+  width: 149px;
+  height: 52px;
+  background: #3734A9;
+  border: 0;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.footer__divider {
+  width: 1140px;
+  height: 2px;
+  background: #E5E5EA;
+  margin-bottom: 40px;
+  border: 0;
+}
+.footer__copyright {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #181433;
+  margin-bottom: 64px;
 }
 
 /*# sourceMappingURL=index.css.map */

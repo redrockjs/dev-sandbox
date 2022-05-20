@@ -1,0 +1,62 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading{
+    font-family: 'Manrope',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 60px;
+    letter-spacing: -0.03em;
+    color: #000000;
+    padding-bottom: 13px;
+  }
+
+  &__text{
+    max-width: 604px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #64607D;
+    padding-bottom: 25px;
+  }
+
+  &__btn{
+    width: 549px;
+    height: 48px;
+    background: #3734A9;
+    border: 0;
+    border-radius: 10px;
+
+    font-family: 'Manrope',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+
+  &__list {
+
+  }
+
+  &__track {
+
+  }
+}

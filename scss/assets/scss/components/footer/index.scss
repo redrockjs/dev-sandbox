@@ -1,0 +1,118 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__top {
+    margin-top: 123px;
+    margin-bottom: 59px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0 30px;
+
+    &-first {
+      width: 213px;
+    }
+
+    &-last {
+      width: 239px;
+    }
+  }
+
+  &__heading {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #1B1C31;
+    margin-bottom: 18px;
+  }
+
+  &__subtext {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #757095;
+  }
+
+  &__navitem{
+    padding-bottom: 12px;
+  }
+
+  &__navlink {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #181433;
+    text-decoration: none;
+  }
+
+  &__form{
+    padding-bottom: 21px;
+  }
+
+  &__input {
+    width: 249px;
+    height: 52px;
+    border: 0;
+    background-color: #F9F9F9;
+    font-family: 'Manrope',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #181433;
+    opacity: 0.2;
+  }
+  &__join-btn{
+    width: 149px;
+    height: 52px;
+    background: #3734A9;
+    border: 0;
+
+    font-family: 'Manrope',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+
+  &__divider {
+    width: 1140px;
+    height: 2px;
+    background: #E5E5EA;
+    margin-bottom: 40px;
+    border: 0;
+  }
+
+  &__copyright {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #181433;
+    margin-bottom: 64px;
+  }
+}

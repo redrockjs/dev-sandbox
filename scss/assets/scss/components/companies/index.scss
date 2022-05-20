@@ -1,0 +1,30 @@
+.companies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 112px;
+
+  &__heading {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 36px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item{
+    padding: 0 25px 0 25px;
+  }
+
+}
