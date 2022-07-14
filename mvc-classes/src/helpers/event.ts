@@ -7,11 +7,11 @@ class Event {
         this.listeners = [];
     }
 
-    addListener(listener) {
+    addListener(listener: Function) {
         this.listeners.push(listener);
     }
 
-    trigger(params) {
+    trigger(params: string) {
         this.listeners.forEach(listener => listener(params));
     }
 }

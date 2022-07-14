@@ -2,7 +2,7 @@ import Event from "../helpers/event";
 
 class Model {
     private _counter: number
-    private counterEvent: Event;
+    counterEvent: Event;
 
     constructor() {
         this._counter = 0;
@@ -10,7 +10,6 @@ class Model {
     }
 
     getNumber(){
-        this.counterEvent.trigger('get');
         return this._counter;
     }
 

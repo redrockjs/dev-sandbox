@@ -4,10 +4,12 @@
 import Event from "../helpers/event";
 
 class View {
-    private clickPlus: Event;
+    clickMinusEvent: Event;
+    clickPlusEvent: Event;
 
     constructor() {
-        this.clickPlus = new Event();
+        this.clickMinusEvent = new Event();
+        this.clickPlusEvent = new Event();
     }
 
     render() {
@@ -28,17 +30,22 @@ class View {
         document.body.appendChild(textResult);
         document.body.appendChild(btnPlus);
 
+        const btnMinusHandle = document.querySelector('.button-minus');
+        if (btnMinusHandle) {
+            btnMinusHandle.addEventListener('click', () => {
+                this.clickMinusEvent.trigger('dec');
+            })
+        }
         const btnPlusHandle = document.querySelector('.button-plus');
         if (btnPlusHandle) {
             btnPlusHandle.addEventListener('click', () => {
-                console.log('click on plus');
-                this.clickPlus.trigger('inc');
+                this.clickPlusEvent.trigger('inc');
             })
         }
     }
 
     updateResult(data) {
-        const resultHandle = document.querySelector('.span');
+        const resultHandle = document.querySelector('.text-result');
         if (resultHandle) {
             resultHandle.innerHTML = data;
         }

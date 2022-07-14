@@ -1,0 +1,21 @@
+html {
+    background: lightgray;
+}
+
+.container {
+    margin: 0 auto;
+    width: 60%;
+    background: white;
+}
+
+.outer-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border: 1px solid chartreuse;
+}
+
+.inner-block {
+    background: white;
+    border: 1px solid darkorange;
+}

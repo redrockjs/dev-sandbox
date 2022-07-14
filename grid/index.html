@@ -1,0 +1,37 @@
+<!doctype html>
+<title>Example</title>
+<style>
+#cf7grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+  }
+#cf7grid > div {
+  font-size: 5vw;
+  /*max-width: 500px;*/
+  padding: .5em;
+  background: gold;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  #cf7grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<div id="cf7grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<div class="container">
+  <ol>
+    <li class="item"><a href=""></a></li>
+    <li class="item"><a href=""></a></li>
+    <li class="item"><a href=""></a></li>
+    <li class="item"><a href=""></a></li>
+    <li class="item"><a href=""></a></li>
+  </ol>
+</div>

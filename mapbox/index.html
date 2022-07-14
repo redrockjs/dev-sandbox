@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div id='map' style='width: 800px; height: 600px;'>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoic21hbGxidXN0ZXIiLCJhIjoiY2t1aWFtcjY4MDg1ejJ4cnY1YjR1cnI2bSJ9.Lk4vn-zpfyoNkegbvNVUaw';
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/smallbuster/ckujrsfuk7rf718rzlvuunozf', // style URL
+                center: [2.3364, 48.86091], // starting position [lng, lat]
+                zoom: 16 // starting zoom
+            });
+            const marker1 = new mapboxgl.Marker()
+                .setLngLat([2.3364, 48.86091])
+                .addTo(map);
+
+            const marker2 = new mapboxgl.Marker()
+                .setLngLat([2.3333, 48.8602])
+                .addTo(map);
+
+            const marker3 = new mapboxgl.Marker()
+                .setLngLat([2.3397, 48.8607])
+                .addTo(map);
+
+            const marker4 = new mapboxgl.Marker()
+                .setLngLat([2.3330, 48.8619])
+                .addTo(map);
+
+            const marker5 = new mapboxgl.Marker()
+                .setLngLat([2.3365, 48.8625])
+                .addTo(map);
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
