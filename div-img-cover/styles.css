@@ -1,0 +1,42 @@
+body {
+  background: gray;
+  margin: 0;
+  padding: 0;
+}
+
+.block {
+  position: relative;
+  margin: 250px auto;
+  width: 80vw;
+  height: 80vh;
+  padding: 20px;
+  background-color: #fff;
+
+  /* background: #fff url("land-lines-product-top.svg") no-repeat top 20px left 0;
+  background-size: auto 50px; */
+}
+
+.image-before {
+  position: absolute;
+  overflow: hidden;
+  top: 18px;
+  left: 150px;
+  height: 39px;
+  width: calc(42vw * 0.9);
+}
+
+.image-after {
+  position: absolute;
+  top: -782px;
+  left: 45vw;
+  height: 839px;
+  width: auto;
+}
+
+.image-svg {
+  position: absolute;
+  top: -245px;
+  left: 140px;
+  width: 50vw;
+  height: 300px;
+}
