@@ -1,0 +1,18 @@
+main {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+aside {
+  flex-basis: content;
+  padding: 0 50px;
+}
+
+article {
+  flex-basis: auto;
+}
