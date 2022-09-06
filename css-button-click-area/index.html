@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            margin: 0 auto;
+            max-width: 900px;
+            height: 90vh;
+            background: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            position: relative;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: transparent;
+            cursor: pointer;
+            border: 1px solid red;
+        }
+
+        button:before {
+            content: '';
+            z-index: 0;
+            background: transparent;
+            border: 1px solid gray;
+            border-radius: 3px;
+            position: absolute;
+            min-width: 120px;
+            min-height: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+        button:active:before {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <button onclick="alert('Click')">
+            Click Me!
+        </button>
+    </main>
+
+</body>
+
+</html>
