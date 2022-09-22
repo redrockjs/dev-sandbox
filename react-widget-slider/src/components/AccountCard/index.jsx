@@ -1,21 +1,21 @@
 import React from "react";
-import s from "./styles.modules.css"
+import s from "./styles.module.scss"
 
-export function Widget() {
+export function AccountCard({currencyType,number, currency, balance, accountType, accountNumber}) {
   return <>
-    <div className="box">
-      <div className="row">
-        <div className="row-account-type">GPB Account</div>
-        <div className="row-number">1234567</div>
+    <div className={s.box}>
+      <div className={s.row}>
+        <div className={s.rowAccountType}> {currencyType} Account</div>
+        <div className={s.rowNumber}>{number}</div>
       </div>
-      <div className="row">
-        <p className="rowBalance">£ 00.00</p>
+      <div className={s.row}>
+        <p className={s.rowBalance}>{`${currency} ${balance}`}</p>
       </div>
-      <div className="row">
-        <p className="rowIban">IBAN</p>
+      <div className={s.row}>
+        <p className={s.rowIban}>{accountType}</p>
       </div>
-      <div className="row">
-        <p className="rowIbanNumber">GB29NWBK60161331926819</p>
+      <div className={s.row}>
+        <p className={s.rowIbanNumber}>{accountNumber}</p>
       </div>
     </div>
   </>
