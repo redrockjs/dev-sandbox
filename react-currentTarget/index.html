@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #div1 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+      }
+      #div2 {
+        height: 150px;
+        width: 150px;
+        background-color: green;
+      }
+      #div3 {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" onclick="handleClick(event)">
+      <div id="div2" onclick="handleClick(event)">
+        <div id="div3" onclick="handleClick(event)"></div>
+      </div>
+    </div>
+    <script>
+      function handleClick(event) {
+        console.log(
+          `target: ${event.target.id}, currentTarget: ${event.currentTarget.id}`
+        );
+      }
+    </script>
+  </body>
+</html>

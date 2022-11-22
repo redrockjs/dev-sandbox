@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrp {
+  position: relative;
+}
+
+.background {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal {
+  z-index: 11;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow-y: auto;
+  background-color: #fff;
+  width: 540px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  border-radius: 0px;
+}
+
+.modalBodyWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBodyWrapper > div {
+  padding: 30px;
+  background: url(https://i.imgur.com/LmX45XA.jpeg);
+}
