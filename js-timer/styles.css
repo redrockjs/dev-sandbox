@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+  /* background: #004578; */
+  font-family: sans-serif;
+  font-weight: 100;
+  background: no-repeat url("/bg.jpg");
+  background-size: cover;
+}
+
+h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 54px;
+}
+
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  /* background: #2b88d8;
+  box-shadow: #7cc0f5; */
+  display: inline-block;
+}
+
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  /* background: #7cc0f5; */
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.block {
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
