@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            margin: 0 auto;
+            width: 1200px;
+            padding: 20px;
+            background: lightslategray;
+        }
+
+        .overlay {
+            display: none;
+            position: absolute;
+            top: 60px;
+            width: 150px;
+            height: auto;
+            border: 1px solid gray;
+            background: #FFFFFF;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .overlay p {
+            margin: 0;
+            padding: 5px;
+        }
+
+        .authname {
+            padding: 10px;
+        }
+
+        .authname:hover .overlay {
+            display: block;
+        }
+
+        .authname svg {
+            transform: none;
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-delay: 0s;
+        }
+
+        .authname:hover svg {
+            transform: rotate(180deg);
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-delay: 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="authname">
+            <div class="overlay">
+                <p>Go to app</p>
+                <p>Exit</p>
+            </div>
+            Hello, Lisa
+            <span>
+                <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 1L8 8L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </div>
+    </main>
+</body>
+
+</html>

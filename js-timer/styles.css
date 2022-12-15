@@ -6,6 +6,18 @@ body {
   background: no-repeat url("/bg.jpg");
   background-size: cover;
 }
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+  body {
+    background-size: 170%;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-position: right 35% bottom 45%;
+    background-size: 400%;
+  }
+}
 
 h1 {
   padding-top: 50px;
@@ -16,27 +28,34 @@ h1 {
   margin: 40px 0px 20px;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+    font-weight: 100;
+    margin: 40px 0px 20px;
+  }
+}
+
 #clockdiv {
   font-family: sans-serif;
   color: #fff;
   display: inline-block;
   font-weight: 100;
   text-align: center;
-  font-size: 54px;
+  font-size: 44px;
 }
 
 #clockdiv > div {
   padding: 10px;
   border-radius: 3px;
-  /* background: #2b88d8;
-  box-shadow: #7cc0f5; */
   display: inline-block;
 }
 
 #clockdiv div > span {
   padding: 15px;
   border-radius: 3px;
-  /* background: #7cc0f5; */
   display: inline-block;
 }
 
@@ -49,4 +68,12 @@ h1 {
   position: absolute;
   top: 0;
   left: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .block {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
