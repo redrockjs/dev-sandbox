@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            margin: 0 auto;
+            width: 1200px;
+            height: 98vh;
+            background: cadetblue;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .menuLink {
+            position: relative;
+            color: #ffffff;
+            cursor: pointer;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .menuLink:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #ffffff;
+            content: "";
+            transition: width 0.3s ease-out;
+        }
+
+        .menuLink:hover:after,
+        .menuLink:focus:after {
+            width: 100%;
+        }
+
+        .menuLinkActive {
+            position: relative;
+            color: #ffffff;
+            cursor: pointer;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .menuLinkActive:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 1px;
+            background-color: #ffffff;
+            content: "";
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <a class="menuLink" href="#">Link 1</a>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">Link 2</a>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">Link 3</a>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">Link 4</a>
+                </li>
+                <li>
+                    <a class="menuLink menuLinkActive" href="#">Link 5</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>

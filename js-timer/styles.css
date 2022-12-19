@@ -14,6 +14,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+  body {
+    background-size: 170%;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-position: right 35% bottom 45%;
+    background-size: 400%;
+  }
+}
 
 h1 {
   padding-top: 10px;
@@ -24,13 +36,23 @@ h1 {
   margin: 40px 0px 20px;
 }
 
-.clock-div {
+@media (max-width: 767px) {
+  h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+    font-weight: 100;
+    margin: 40px 0px 20px;
+  }
+}
+
+#clockdiv {
   font-family: sans-serif;
   color: #fff;
   display: inline-block;
   font-weight: 100;
   text-align: center;
-  font-size: 54px;
+  font-size: 44px;
 }
 
 .clock-div > div {
@@ -57,23 +79,10 @@ h1 {
   left: 100px;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-position: 33% 50%;
-  }
-
-  .clock-div {
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 44px;
-  }
-
+@media only screen and (max-width: 767px) {
   .block {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
   }
 }
