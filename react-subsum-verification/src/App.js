@@ -4,7 +4,7 @@ import SumsubWebSdk from "@sumsub/websdk-react";
 function App() {
   const applicantEmail = "smb.sochi@gmail.com";
   const applicantPhone = "+79183070045";
-  const accessToken = "_act-sbx-5182a756-be7e-4e14-83f8-7c2e080ea419";
+  const accessToken = "_act-sbx-541265b4-f504-46cb-99bc-46595af51b90";
   console.log(accessToken);
 
   return (
@@ -14,7 +14,7 @@ function App() {
         updateAccessToken={() => console.log("updateAccessToken")}
         expirationHandler={() => Promise.resolve(accessToken)}
         config={{
-          lang: "ru-RU",
+          lang: "en-EN",
           email: applicantEmail,
           phone: applicantPhone,
           i18n: {
@@ -35,7 +35,7 @@ function App() {
             console.error("WebSDK onError", error);
           }
         }}
-        options={{addViewportTag: false, adaptIframeHeight: true}}
+        options={{ addViewportTag: false, adaptIframeHeight: true }}
         onMessage={(type, payload) => {
           console.log("onMessage", type, payload);
         }}

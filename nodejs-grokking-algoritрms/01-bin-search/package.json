@@ -1,0 +1,13 @@
+{
+  "name": "01-bin-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.10"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "mon": "nodemon index.js"
+  }
+}
