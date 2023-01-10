@@ -1,0 +1,31 @@
+.main{
+    margin: 0 auto;
+    width: 900px;
+    height: 90vh;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.mainHeader{
+    align-self: center;
+}
+
+.mainControls{
+    align-self: center;
+}
+
+.mainValue{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+button{
+    margin: 20px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 24px;
+}
