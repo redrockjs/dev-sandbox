@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div>
+    <main>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("name", {
@@ -77,7 +77,7 @@ function App() {
         />
 
         <div>
-          <button>Send</button>
+          <button type={'submit'}>Send</button>
         </div>
       </form>
       <div>
@@ -90,7 +90,7 @@ function App() {
           Fill data
         </button>
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+  width: 900px;
+  background: ghostwhite;
+  padding: 20px;
+  height: 90vh;
+}
