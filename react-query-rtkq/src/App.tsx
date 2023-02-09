@@ -1,23 +1,49 @@
 import React from "react";
 import "./App.css";
+import {useGetPostsQuery} from "./Api/apiSlice";
+
+
+type PostDataType = {
+  userId: number
+  id: number
+  title: string
+  body: string
+}
 
 function App() {
-  const handleClick = () => {};
+
+  const {data, isLoading, error} = useGetPostsQuery({})
+
+
+  const handleClick = () => {
+  };
+
+
   return (
     <main className="main">
       <h1>RTK-query</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto
-        quo id omnis doloribus eum impedit saepe, vel alias dolore excepturi
-        nemo sequi non. Nam delectus aperiam itaque nostrum ipsam. Nisi eaque
-        amet sint ducimus aspernatur, natus unde rerum dolor. Aut, molestiae
-        eveniet? Enim blanditiis, nam laudantium eius fugiat officiis rem
-        voluptatem dignissimos exercitationem pariatur praesentium fugit culpa!
-        Doloribus, in?
-      </p>
       <button>Get</button>
+      {isLoading
+        && <h2>Loading ...</h2>
+      }
+      {data &&
+        <ul>{
+          data.map((post: PostDataType) => {
+            return <li>
+              <p>id: {post.id}</p>
+              <p>title: {post.title}</p>
+              <p>post: {post.body}</p>
+            </li>
+          })
+        }
+        </ul>
+      }
+      {error &&
+        <p>error</p>
+      }
+
     </main>
-  );
+  )
 }
 
 export default App;
