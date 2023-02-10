@@ -1,49 +1,21 @@
-import React from "react";
 import "./App.css";
-import {useGetPostsQuery} from "./Api/apiSlice";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {GetPost, GetPosts, Home, AddPost} from "./pages";
+import {Header} from "./layouts";
 
 
-type PostDataType = {
-  userId: number
-  id: number
-  title: string
-  body: string
-}
-
-function App() {
-
-  const {data, isLoading, error} = useGetPostsQuery({})
-
-
-  const handleClick = () => {
-  };
-
-
+export default function App() {
   return (
-    <main className="main">
-      <h1>RTK-query</h1>
-      <button>Get</button>
-      {isLoading
-        && <h2>Loading ...</h2>
-      }
-      {data &&
-        <ul>{
-          data.map((post: PostDataType) => {
-            return <li>
-              <p>id: {post.id}</p>
-              <p>title: {post.title}</p>
-              <p>post: {post.body}</p>
-            </li>
-          })
-        }
-        </ul>
-      }
-      {error &&
-        <p>error</p>
-      }
-
-    </main>
+    <div className="container mx-auto bg-[#cccccc] h-[100vh] p-5">
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/getposts" element={<GetPosts/>}/>
+          <Route path="/getpost" element={<GetPost/>}/>
+          <Route path="/addpost" element={<AddPost/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
-
-export default App;
