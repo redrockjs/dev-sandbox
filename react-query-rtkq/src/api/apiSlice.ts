@@ -32,6 +32,12 @@ export const apiSlice = createApi({
               'Content-type': 'application/json; charset=UTF-8',
             }
           })
+        }),
+        deletePost: build.mutation({
+          query: (id) => ({
+            url: `posts/${id}`,
+            method: 'DELETE',
+          })
         })
       }),
     }
@@ -39,4 +45,10 @@ export const apiSlice = createApi({
 ;
 
 
-export const {useGetPostsQuery, useGetPostQuery, useAddPostMutation, useUpdatePostMutation} = apiSlice;
+export const {
+  useGetPostsQuery,
+  useGetPostQuery,
+  useAddPostMutation,
+  useUpdatePostMutation,
+  useDeletePostMutation
+} = apiSlice;
