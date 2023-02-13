@@ -1,4 +1,4 @@
-import {useGetPostQuery} from "../../api/apiSlice";
+import {useGetPostQuery} from "../../api/postsEndpoints";
 import {useState} from "react";
 
 export function GetPost() {

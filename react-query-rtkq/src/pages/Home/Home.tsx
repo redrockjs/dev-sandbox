@@ -1,10 +1,6 @@
-import {useGetPostsQuery} from "../../api/apiSlice";
 import React from "react";
 
-
-
 export function Home() {
-
 
   return (
     <div className="">

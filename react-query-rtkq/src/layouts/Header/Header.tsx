@@ -10,15 +10,11 @@ export function Header() {
             </li>
             |
             <li className="cursor-pointer px-1 text-blue-900">
-              <Link to="/getposts">GetPosts</Link>
+              <Link to="/posts">Posts</Link>
             </li>
             |
-            <li className="cursor-pointer px-1 text-blue-900">
-              <Link to="/getpost">GetPost</Link>
-            </li>
-            |
-            <li className="cursor-pointer px-1 text-blue-900">
-              <Link to="/addpost">AddPost</Link>
+            <li className="cursor-pointer pl-1 text-blue-900">
+              <Link to="/users">Users</Link>
             </li>
           </ul>
         </nav>

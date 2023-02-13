@@ -1,4 +1,4 @@
-import {useGetPostsQuery} from "../../api/apiSlice";
+import {useGetPostsQuery} from "../../api/postsEndpoints";
 import {PostDataType} from "../../types";
 
 export function GetPosts() {

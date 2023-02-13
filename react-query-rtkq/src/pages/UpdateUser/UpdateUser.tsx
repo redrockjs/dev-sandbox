@@ -1,20 +1,21 @@
-import {useUpdatePostMutation} from "../../api/postsEndpoints"
+import {useUpdateUserMutation} from "../../api/usersEndpoints";
 
-export function UpdatePost() {
-  const [updatePost, {isLoading, isError, isSuccess}] = useUpdatePostMutation()
+export function UpdateUser() {
+
+
+  const [updateUser, {isLoading, isError, isSuccess}] = useUpdateUserMutation()
 
   const handleClick = async () => {
-    await updatePost({
+    await updateUser({
       id: 1,
-      title: 'foo',
-      body: 'bar',
-      userId: 1,
+      username: "Alex Smith",
+      email: "alex@smith.com"
     })
   }
 
   return (
     <>
-      <p>Update Post</p>
+      <p>Update User</p>
 
       <button className="p-1 border rounded bg-[#777] text-white"
               onClick={handleClick}>

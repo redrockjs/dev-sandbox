@@ -1,5 +1,5 @@
-import {useAddPostMutation} from "../../api/apiSlice";
-import {useRef, useState} from "react";
+import {useAddPostMutation} from "../../api/postsEndpoints"
+import {useRef} from "react";
 
 export function AddPost() {
 
@@ -8,7 +8,7 @@ export function AddPost() {
   const titleRef = useRef<HTMLInputElement>(null)
   const postRef = useRef<HTMLInputElement>(null)
 
-  const handleAddPost = async() => {
+  const handleAddPost = async () => {
     console.log(
       {
         title: titleRef.current?.value,
@@ -26,8 +26,7 @@ export function AddPost() {
   return (
     <div>
       <h1>RTK-query - Add Post</h1>
-      <div  className="flex flex-col items-start gap-2 w-[300px]"
-            onSubmit={handleAddPost}>
+      <div className="flex flex-col items-start gap-2 w-[300px]">
         <input className="my-2 p-1"
                type="text"
                placeholder="title"
@@ -38,10 +37,20 @@ export function AddPost() {
                placeholder="post"
                ref={postRef}
         />
-        <button type={"button"} onClick={handleAddPost}>
+        <button type={"button"}
+                onClick={handleAddPost}>
           Send
         </button>
       </div>
+      {isLoading &&
+        <h2>Loading...</h2>
+      }
+
+      {isError &&
+        <p className="text-red-500 text-[24px] py-2">
+          error loading
+        </p>
+      }
     </div>
   )
 }
