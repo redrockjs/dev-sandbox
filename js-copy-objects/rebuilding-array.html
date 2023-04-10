@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Rebulding array</title>
+</head>
+
+<body>
+
+	<script>
+
+		const sourceArr = {
+			"data": {
+				"statusCode": 400,
+				"data": null,
+				"errorMessages": [
+					{
+						"type": "Не может быть пустым"
+					},
+					{
+						"name": "Не может быть пустым"
+					},
+					{
+						"age": "Не может быть пустым"
+					},
+					{
+						"description": "Не может быть пустым"
+					},
+					{
+						"tagsList": "Не может быть пустым"
+					},
+					{
+						"links": {
+							"0": [
+								{
+									"site": "Не может быть пустым"
+								},
+								{
+									"link": "Должен быть URL-адресом"
+								}
+							],
+							"1": [
+								{
+									"site": "Не может быть пустым"
+								},
+								{
+									"link": "Должен быть URL-адресом"
+								}
+							]
+						}
+					},
+					{
+						"investition": [
+							{
+								"projectValuation": "Должен быть не меньше чем 1"
+							}
+						]
+					},
+					{
+						"resurses": {
+							"0": [
+								{
+									"resurseName": "Не может быть пустым"
+								},
+								{
+									"description": "Не может быть пустым"
+								}
+							],
+							"1": [
+								{
+									"resurseName": "Не может быть пустым"
+								},
+								{
+									"description": "Не может быть пустым"
+								}
+							]
+						}
+					},
+					{
+						"milestones": {
+							"0": [
+								{
+									"quarter": "Не может быть пустым"
+								},
+								{
+									"year": "Не может быть пустым"
+								}
+							],
+							"1": [
+								{
+									"quarter": "Не может быть пустым"
+								},
+								{
+									"year": "Не может быть пустым"
+								}
+							]
+						}
+					},
+					{
+						"contacts": [
+							{
+								"phone": "Неверный номер телефона"
+							},
+							{
+								"email": "Адрес почты"
+							},
+							{
+								"telegram": "Неверный формат ссылки для Telegram"
+							},
+							{
+								"vk": "Неверный формат ссылки для VK"
+							}
+						]
+					}
+				]
+			}
+		}
+
+
+		let messages = sourceArr.data.errorMessages
+
+
+		const flattenErrors = (errorMessages) => {
+
+			let resultArr = [];
+
+			errorMessages.forEach((obj) => {
+				const entry = Object.entries(obj)?.[0];
+				const key = entry[0];
+				const value = entry[1];
+				//if array field has nested object
+				if (Array.isArray(value)) {
+					const rootEntry = Object.entries(value)?.[0];
+					const rootKey = entry[0];
+					value.forEach(item => {
+						for (const [intkey, intvalue] of Object.entries(item)) {
+							//console.log(`${rootKey}.${intkey}`);
+							resultArr.push(`${rootKey}.${intkey}`)
+						}
+					})
+				} else {
+					//if array field is object in object
+					if (Object.keys(obj)[0] === 'links' || Object.keys(obj)[0] === 'resurses' || Object.keys(obj)[0] === 'milestones') {
+						for (const [key, value] of Object.entries(obj[Object.keys(obj)[0]])) {
+							value.map((item) => {
+								for (const [keyInt, valueInt] of Object.entries(item)) {
+									//console.log(`${Object.keys(obj)[0]}.${key}.${keyInt}`);
+									resultArr.push(`${Object.keys(obj)[0]}.${key}.${keyInt}`);
+								}
+							})
+						}
+					} else {
+						//if array field is usual object
+						//console.log(key)
+						resultArr.push(key)
+					}
+				}
+			})
+			return resultArr
+		}
+
+
+
+		messages.forEach((obj) => {
+
+			const entry = Object.entries(obj)?.[0];
+			const key = entry[0];
+			const value = entry[1];
+
+			//if array field has nested object
+			if (Array.isArray(value)) {
+				const rootEntry = Object.entries(value)?.[0];
+				const rootKey = entry[0];
+				value.forEach(item => {
+					for (const [intkey, intvalue] of Object.entries(item)) {
+						console.log(`${rootKey}.${intkey}`);
+					}
+				})
+
+
+			} else {
+				//if array field is object in object
+				if (Object.keys(obj)[0] === 'links' || Object.keys(obj)[0] === 'resurses' || Object.keys(obj)[0] === 'milestones') {
+					for (const [key, value] of Object.entries(obj[Object.keys(obj)[0]])) {
+						value.map((item) => {
+							for (const [keyInt, valueInt] of Object.entries(item)) {
+								console.log(`${Object.keys(obj)[0]}.${key}.${keyInt}`);
+							}
+						})
+					}
+				} else {
+					//if array field is usual object
+					console.log(key)
+				}
+
+			}
+
+		})
+
+
+		//console.log('Source', sourceArr);
+		//console.log('Result', flattenErrors(messages));
+
+
+
+	</script>
+
+</body>
+
+</html>

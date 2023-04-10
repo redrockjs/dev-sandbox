@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coincidence copy</title>
+</head>
+
+<body>
+
+  <script>
+
+    const tagArr = [
+      {
+        "id": 1,
+        "name": "Все"
+      },
+      {
+        "id": 2,
+        "name": "Маркетплейс"
+      },
+      {
+        "id": 3,
+        "name": "Нетворкинг"
+      },
+      {
+        "id": 4,
+        "name": "Образование"
+      },
+      {
+        "id": 5,
+        "name": "Финтех"
+      },
+      {
+        "id": 6,
+        "name": "Портфолио"
+      },
+      {
+        "id": 7,
+        "name": "Знакомства"
+      },
+      {
+        "id": 8,
+        "name": "Креативные индустрии"
+      },
+      {
+        "id": 9,
+        "name": "Стажировки и практики"
+      },
+      {
+        "id": 10,
+        "name": "Системы контроля"
+      },
+      {
+        "id": 11,
+        "name": "Агро"
+      }
+    ]
+
+    const choisenArr = ['Все', 'Финтех', 'Системы контроля']
+
+    const currentArr = tagArr.map(item => {
+      if (choisenArr.includes(item.name)) {
+        return item
+      }
+    }).filter(item => item !== undefined)
+
+
+    console.log(tagArr);
+
+    console.log(currentArr)
+
+  </script>
+
+</body>
+
+</html>
