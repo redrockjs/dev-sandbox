@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main {
+      margin: 0 auto;
+      width: 800px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px 20px;
+      padding-bottom: 40px;
+      justify-items: center;
+    }
+
+    .card {
+      position: relative;
+      background: azure;
+      width: 100%;
+      height: 200px;
+    }
+
+    .wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .wrapper:hover {
+      z-index: 2;
+      height: 220px;
+      background: azure;
+      border: 1px solid #E1E3E6;
+      box-shadow: 4px 4px 0px rgba(69, 73, 76, 0.3);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="card">
+      <div class="wrapper">
+        test1
+      </div>
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        test2
+      </div>
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        test3
+      </div>
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        test4
+      </div>
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        test5
+      </div>
+    </div>
+    <div class="card">
+      <div class="wrapper">
+        test6
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
