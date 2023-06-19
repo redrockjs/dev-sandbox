@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arrCurrent = [
+            //"0-18",
+            //"35-44",
+            //"55+"
+            //"all"
+        ]
+
+        let objDefault = {
+            "0-18": false,
+            "18-24": false,
+            "25-34": false,
+            "35-44": false,
+            "45-54": false,
+            "55+": false
+        }
+
+        let objNew = { ...objDefault };
+
+        if (arrCurrent.includes('all')) {
+            for (let key in objDefault) {
+                objNew[key] = true
+            }
+        } else {
+            for (let key in objDefault) {
+                if (arrCurrent.includes(key)) {
+                    objNew[key] = true
+                }
+            }
+        }
+
+        console.log(JSON.stringify(objNew));
+    </script>
+</body>
+
+</html>
