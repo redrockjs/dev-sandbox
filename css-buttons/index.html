@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: lightcyan;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h2 {
+            padding-bottom: 20px;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 900px;
+            height: calc(100vh - 40px*2);
+            background: lightgoldenrodyellow;
+            padding: 40px;
+        }
+
+        /* .container {
+            height: 50px;
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        .btn {
+            background: transparent;
+            border: 3px solid orange;
+            padding: 12px 24px;
+            border-radius: 50px;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        .btn:hover {
+            background: white;
+            color: gray;
+        }
+
+        .btn:active {
+            background: white;
+            color: red;
+            transform: scale(0.9)
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <h2>TEST BUTTON</h2>
+        <!-- <div class="container"> -->
+        <button class="btn">
+            <span class="inner__btn">
+                click me once
+            </span>
+        </button>
+        <!-- </div> -->
+        <p>some string</p>
+    </main>
+</body>
+
+</html>
