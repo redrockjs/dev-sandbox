@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      margin: 0 auto;
+      /* width: 900px; */
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+    }
+
+    section>*:last-child {
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* not essential; just for demo purposes */
+    section {
+      background-color: #eee;
+      font-family: helvetica, arial;
+      font-size: 10pt;
+      padding: 4px;
+    }
+
+    section {
+      border: 1px solid #bbb;
+      padding: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div>left</div>
+      <div>center</div>
+      <div>right side is longer</div>
+    </section>
+
+    <section>
+      <div>left</div>
+      <div>center</div>
+      <div>right side is much, much longer</div>
+    </section>
+
+    <section>
+      <div>left</div>
+      <div>center</div>
+      <div>right side is much, much longer, super long in fact</div>
+    </section>
+  </main>
+</body>
+
+</html>
