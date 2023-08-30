@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 900px;
+            height: 50vh;
+            /* background: lightgray; */
+            padding: 20px;
+            /* background: url('https://devdemo02.manisland.com/images/club-bg.jpg'); */
+        }
+
+        .button {
+            position: relative;
+            width: max-content;
+            padding: 10px;
+            /* height: 60px; */
+            margin: 30px;
+            border-radius: 30px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
+            background: linear-gradient(35deg, red, green);
+            border-radius: 34px;
+            z-index: -1;
+        }
+
+        .button__masked {
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: #333;
+
+            border-radius: 50px !important;
+            background: linear-gradient(to top, gray, transparent) !important;
+            overflow: hidden;
+            padding: 1px;
+            display: inline-block;
+        }
+
+        .button__masked span {
+            border-radius: 50px !important;
+            background: #FFFFFF !important;
+            border: none;
+            padding: 10px 30px;
+            display: inline-block;
+        }
+
+        .button__transparent {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            position: relative;
+            z-index: 2;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: #333;
+            padding: 16px 30px;
+            border-radius: 30px;
+            background-color: transparent;
+            background-image: linear-gradient(to right, blue, red), linear-gradient(to right, blue, red);
+            background-size: 100% 1px;
+            background-position: 0 100%, 0 0;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            width: max-content;
+            margin: 20px 0;
+        }
+
+        .button__transparent:before,
+        .button__transparent:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 21px;
+            border: 1px solid blue;
+            border-right: none;
+            border-radius: 30px 0 0 30px;
+        }
+
+        .button__transparent:after {
+            border: 1px solid red;
+            border-left: none;
+            left: auto;
+            right: 0;
+            border-radius: 0 30px 30px 0;
+        }
+
+        .btn__transparent {
+            width: 10px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn__transparent span {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            color: #FFF;
+            margin-bottom: 5px;
+        }
+
+        .btn__transparent:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 30px;
+            padding: 2px;
+            background: linear-gradient(to top, #999 0%, transparent 90%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+        }
+
+        .zzz {
+            border: 1px solid red;
+            width: max-content;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .zzz:hover {
+            box-shadow: 1px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="button">
+            <span>SEND</span>
+        </div>
+
+        <div class="button__masked">
+            <span>button</span>
+        </div>
+
+        <div class="button__transparent">
+            <span>SEND</span>
+        </div>
+
+        <div class="btn__transparent">
+            <span>SEND</span>
+        </div>
+
+        <div class="zzz">
+            привет
+        </div>
+    </main>
+</body>
+
+</html>
