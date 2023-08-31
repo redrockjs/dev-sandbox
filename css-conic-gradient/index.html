@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 900px;
+            height: 100dvh;
+            background: gray;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .img1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .img2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            fill: conic-gradient(from 180deg at 50% 50%, #0C0C0C 0deg, #A61613 360deg);
+        }
+
+        .img2 svg circle {
+            fill: conic-gradient(from 180deg at 50% 50%, #0C0C0C 0deg, #A61613 360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="image">
+            <svg class="img1" xmlns="http://www.w3.org/2000/svg" width="228" height="228" viewBox="0 0 228 228"
+                fill="none">
+                <g filter="url(#filter0_f_612_8030)">
+                    <circle cx="113.999" cy="114" r="85.9868" transform="rotate(-90 113.999 114)"
+                        fill="url(#paint0_angular_612_8030)" />
+                    <circle cx="113.999" cy="114" r="85.9868" transform="rotate(-90 113.999 114)"
+                        fill="url(#paint1_angular_612_8030)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_612_8030" x="0.0117188" y="0.0126953" width="227.973" height="227.974"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="14" result="effect1_foregroundBlur_612_8030" />
+                    </filter>
+                    <radialGradient id="paint0_angular_612_8030" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(113.999 114) rotate(90) scale(85.9868)">
+                        <stop stop-color="#0C0C0C" />
+                        <stop offset="1" stop-color="#A61613" />
+                    </radialGradient>
+                    <radialGradient id="paint1_angular_612_8030" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(113.999 114) rotate(90) scale(85.9868)">
+                        <stop stop-color="#A61613" />
+                        <stop offset="1" stop-color="#A61613" />
+                    </radialGradient>
+                </defs>
+            </svg>
+            <svg class="img2" xmlns="http://www.w3.org/2000/svg" width="228" height="228" viewBox="0 0 228 228"
+                fill="none">
+                <circle cx="60.9985" cy="110.9995" r="85.9868" transform="rotate(-90 85.9985 85.9995)"
+                    fill="url(#paint0_angular_612_8031)" />
+                <defs>
+                    <radialGradient id="paint0_angular_612_8031" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(85.9985 85.9995) rotate(90) scale(85.9868)">
+                        <stop stop-color="#A61613" />
+                        <stop offset="1" stop-color="#A61613" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </main>
+</body>
+
+</html>
