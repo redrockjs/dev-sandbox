@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .main {
+            position: relative;
+            margin: 0 auto;
+            width: 900px;
+            height: 100dvh;
+        }
+
+        svg {
+            border: solid
+        }
+
+        .demo {
+            flex-direction: column;
+            display: flex;
+            width: 120px;
+        }
+
+        .progress__meter {
+            fill: none;
+        }
+
+        .progress__meter {
+            /* stroke: grey; */
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+
+        <div class="demo">
+            <div class="demo">
+                <svg class="progress" viewBox="-2 -2 124 124">
+                    <path class="progress__meter" id="base" d="M60,6A54,54 0 0 1 60,114A54,54 0 0 1 60,6z"
+                        stroke-width="12" />
+                    <g id="progress__value"></g>
+                </svg>
+                <input id="control" type="range" value="100" />
+            </div>
+        </div>
+        <script>
+            const SVG_NS = 'http://www.w3.org/2000/svg';
+            const CIRCUMFERENCE = base.getTotalLength()
+            const UNIT = CIRCUMFERENCE / 100;
+            let circles = [];//the array of circles
+
+            //создайте 100 кругов с разным цветом заливки, чтобы создать иллюзию градиента
+            for (let i = 0; i < 100; i++) {
+                let pos = base.getPointAtLength(i * UNIT);
+                let o = { cx: pos.x, cy: pos.y, r: 5.5, 'fill-opacity': 0, fill: `hsl(0,100%,${50 + (100 - i) / 2}%)` }
+                circles.push(drawCircle(o, progress__value));
+            }
+
+            progress();
+
+            control.addEventListener('input', progress);
+
+            function progress() {
+                let val = control.valueAsNumber;
+                for (let i = 0; i < circles.length; i++) {
+                    if (i <= val) {
+                        circles[i].setAttributeNS(null, 'fill-opacity', 1)
+                    } else {
+                        circles[i].setAttributeNS(null, 'fill-opacity', 0)
+                    }
+                }
+            }
+
+            // функция для создания круга
+            function drawCircle(o, parent) {
+                var circle = document.createElementNS(SVG_NS, 'circle');
+                for (var name in o) {
+                    if (o.hasOwnProperty(name)) {
+                        circle.setAttributeNS(null, name, o[name]);
+                    }
+                }
+                parent.appendChild(circle);
+                return circle;
+            }
+        </script>
+    </main>
+</body>
+
+</html>

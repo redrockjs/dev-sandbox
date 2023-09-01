@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .main {
+            position: relative;
+            margin: 0 auto;
+            width: 900px;
+            height: 100dvh;
+            /* background: gray; */
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 180deg;
+            inherits: false;
+        }
+
+        @property --progress {
+            syntax: '<progress>';
+            initial-value: 80;
+            inherits: false;
+        }
+
+        @keyframes progress {
+            0% {
+                /* --angle: 180deg; */
+                --progress: 80;
+            }
+
+            /* 25% {
+                --angle: 270deg;
+                --progress: 60;
+            }
+
+            50% {
+                --angle: 360deg;
+                --progress: 40;
+            }
+
+            75% {
+                --angle: 450deg;
+                --progress: 20;
+            } */
+
+            100% {
+                /* --angle: 540deg; */
+                --progress: 0;
+            }
+        }
+
+
+
+        .block {
+            position: absolute;
+            top: 30px;
+            left: 29px;
+            width: 170px;
+            height: 168px;
+            background: red;
+            border-radius: 50%;
+            /* background: transparent; */
+            background: conic-gradient(from var(--angle), black calc(var(--progress) * 1%), red 100%);
+            /* background: conic-gradient(black calc(var(--progress) * 1%), red 100%); */
+            animation: progress 5s 1 forwards;
+        }
+
+        .block::before {
+            animation: progress 5s 1 forwards;
+        }
+
+        /* @keyframes animate {
+            from {
+                background: conic-gradient(from 180deg, black 80%, red 100%);
+            }
+
+            to {
+                background: conic-gradient(from 290deg, black 50%, red 100%);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <svg width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_f_0_1)">
+                <circle cx="113.999" cy="114" r="85.9868" transform="rotate(-90 113.999 114)"
+                    fill="url(#paint0_angular_0_1)" />
+            </g>
+            <circle cx="113.999" cy="114" r="85.9868" transform="rotate(-90 113.999 114)"
+                fill="url(#paint1_angular_0_1)" />
+            <defs>
+                <filter id="filter0_f_0_1" x="0.0117188" y="0.0126953" width="227.973" height="227.974"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="14" result="effect1_foregroundBlur_0_1" />
+                </filter>
+                <radialGradient id="paint0_angular_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(113.999 114) rotate(90) scale(85.9868)">
+                    <stop stop-color="#0C0C0C" />
+                    <stop offset="1" stop-color="#A61613" />
+                </radialGradient>
+                <radialGradient id="paint1_angular_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(113.999 114) rotate(90) scale(85.9868)">
+                    <stop stop-color="#0C0C0C" />
+                    <stop offset="1" stop-color="#A61613" />
+                </radialGradient>
+            </defs>
+        </svg>
+        <div class="block"></div>
+
+    </main>
+</body>
+
+</html>
